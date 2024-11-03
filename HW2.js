@@ -126,3 +126,18 @@ try {
 	
 Приклад роботи:
 console.log(difference([5, 10, 20], [0, 10, 20, 30]));		// ["5", "0", "30"] */
+
+const arr1 = [5, 10, 20];
+const arr2 = [0, 10, 20, 30];
+
+function findArrDiff(arr1, arr2) {
+    const uniqueInArr1 = arr1.filter(function(inique) {
+        return !arr2.includes(inique);
+    });
+    const uniqueInArr2 = arr2.filter(function(inique) {
+        return !arr1.includes(inique);
+    });
+    return uniqueInArr1.concat(uniqueInArr2);
+};
+
+console.log(findArrDiff(arr1,arr2)); 
