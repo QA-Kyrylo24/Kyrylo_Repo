@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW3</title>
+</head>
+
+<body>
+    <section>
+        <h2 class="header">Header</h2>
+        <p id='data'>DOM - document object model </p>
+        <span>Span</span>
+        <div>Invisible element</div>
+    </section>
+    <button id="btn">Add style</button>
+
+    <script>
+        function addStyle() {
+
+            const header = document.querySelector("h2.header");
+            header.style.color = "red";
+            header.style.textDecoration = "underline";
+
+
+            const paragraph = document.getElementById("data");
+            paragraph.style.color = "brown";
+            paragraph.style.fontSize = "18px";
+            paragraph.style.fontFamily = "Comic Sans MS";
+
+            const span = document.querySelector("span");
+            header.style.color = "green";
+            header.style.fontStyle = "italic";
+
+
+            const divElement = document.querySelector("div");
+            divElement.style.display = "none";
+        }
+
+
+        document.getElementById("btn").addEventListener("click", addStyle);
+
+        
+    </script>
+</body>
+
+
+</html>

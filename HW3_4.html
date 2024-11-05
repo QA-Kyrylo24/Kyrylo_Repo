@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW3</title>
+</head>
+
+<body>
+    <script>
+
+        const article = document.createElement("article");
+        article.classList.add("article", "postList");
+
+        const container = document.createElement("div");
+        container.id = "container";
+
+        const posts = ["Post 1", "Post 2", "Post 3"];
+        posts.forEach(postText => {
+            const paragraph = document.createElement("p");
+            paragraph.textContent = postText;
+            container.append(paragraph);
+        });
+
+        article.append(container);
+
+        document.body.append(article);
+    </script>
+
+
+
+</body>
+
+
+</html>
+

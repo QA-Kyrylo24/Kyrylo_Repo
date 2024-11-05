@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User form</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend align="center"> Новий користувач </legend>
+        <input value="Name" type="text" data-form="ПІБ" class="text-data arr" name="fio" placeholder="Введіть ПІБ">
+        <input value="+380-00-000-0000" type="phone" data-form="Номер телефону" class="arr" name="phone"
+            placeholder="+380-00-000-0000">
+        <input value="2020-02-02" type="date" data-form="Дата народження" class="arr" name="birthday">
+        <input value="softserve@softserve.com" type="email" data-form="Електронна пошта" class="arr"
+            placeholder="email@softserveinc.com" name="email">
+        <input type="submit" class="btn">
+    </fieldset>
+    <script>
+        function getUserData() {
+            const name = document.getElementsByClassName("text-data arr")[0].value;
+            const phoneNumber = document.querySelector('input[class="arr"]').value;
+            const dateOfBirth = document.querySelector('input[type="date"]').value;
+            const emailAddress = document.querySelector('input[name="email"]').value;
+
+            console.log("Name:", name);
+            console.log("Phone Number:", phoneNumber);
+            console.log("Date of Birth:", dateOfBirth);
+            console.log("Email Address:", emailAddress);
+        };
+        getUserData();
+
+        document.querySelector(".btn").addEventListener("click", getUserData); // Якщо треба апдейтнути значення, добавив на сабміт
+
+    </script>
+
+</body>
+
+</html>

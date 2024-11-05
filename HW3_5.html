@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW3</title>
+</head>
+
+<body>
+
+    <div id="messages"></div> 
+
+    <div id="input">
+        <textarea id="messageInput" placeholder="Write message..."></textarea>
+        <button id="sendButton">Send</button>
+    </div>
+
+    <script>
+        const sendButton = document.getElementById("sendButton");
+        const messageInput = document.getElementById("messageInput");
+        const messagesContainer = document.getElementById("messages");
+
+        sendButton.addEventListener("click", function() {
+
+            const messageText = messageInput.value.trim();
+            
+            if (messageText) {
+                const messageContainer = document.createElement("div");
+  
+                const newMessage = document.createElement("p");
+                newMessage.textContent = messageText;
+                messageContainer.append(newMessage);
+
+                const date = new Date();
+                const dateTime = document.createElement("div");
+                dateTime.textContent = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+                messageContainer.append(dateTime);
+
+                messagesContainer.append(messageContainer);
+
+                messageInput.value = "";
+            }
+        });
+    </script>
+
+</body>
+
+
+</html>
+
