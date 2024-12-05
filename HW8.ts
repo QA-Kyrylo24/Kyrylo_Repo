@@ -60,8 +60,7 @@ const getSalaryInfo = (
     let salary: number;
 
     if (premiumData.isPremium) {
-        salary =
-            employeeData.workingHoursPerDay *
+        salary = employeeData.workingHoursPerDay *
             payPerHour *
             workingDays *
             experienceCoefficient +
@@ -82,7 +81,7 @@ const salaryInfo: string = getSalaryInfo(
     premiumData,
     payPerHour,
     workingDays,
-    experienceCoefficients[2] 
+    experienceCoefficients[2]
 );
 
 console.log(salaryInfo);
@@ -157,7 +156,7 @@ console.log(processData([])); // "Empty array: []"
 //   const triangle: Triangle = { type: "triangle", base: 5, height: 10 };
 //   const rectangle: Rectangle = { type: "rectangle", width: 8, height: 14 };
 //   const circle: Circle = { type: "circle", radius: 8 };
- 
+
 //   console.log(getFigureInfo(triangle));
 // // Output: " Triangle with base 5 and height 10 has an area of 25" 
 //   console.log(getFigureInfo(rectangle));
