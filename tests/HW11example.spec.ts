@@ -57,7 +57,6 @@ test('task3', async ({ page }) => {
 
   const searchBox = page.getByTitle('Пошук');
   await searchBox.fill('Playwright');
-
   await searchBox.press('Enter');
 
   const results = page.locator('#search'); 
